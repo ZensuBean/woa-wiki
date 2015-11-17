@@ -4,30 +4,24 @@ html
         include /shared/_header
     body
 
-        nav.navbar.navbar-light.bg-faded
+        nav.navbar.navbar-light.bg-faded.navbar-fixed-top
             button.navbar-toggler.hidden-sm-up(type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2") &#9776;
 
             #exCollapsingNavbar2.collapse.navbar-toggleable-xs
-                a.navbar-brand(href="#") Responsive navbar
-    <ul class="nav navbar-nav">
-    <li class="nav-item active">
-    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="#">Features</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="#">Pricing</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="#">About</a>
-    </li>
-    </ul>
-    </div>
-</nav>
+                a.navbar-brand(href="#") WOA-Wiki
+                ul.nav.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href="#") Home #[span.sr-only (current)]
 
+                    li.nav-item
+                        a.nav-link(href="#") Features
+                    li.nav-item
+                        a.nav-link(href="#") Pricing
+                    li.nav-item
+                        a.nav-link(href="#") About
 
-        block content
+        main.container-fluid
+            block content
 
         include /shared/_scripts
 
