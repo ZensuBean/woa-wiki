@@ -1,0 +1,52 @@
+nav.navbar.navbar-dark.bg-inverse.navbar-fixed-top
+    .container-fluid
+        button.navbar-toggler.hidden-sm-up(type="button" data-toggle="collapse" data-target="#main-nav") &#9776;
+
+        #main-nav.collapse.navbar-toggleable-xs
+            .row
+                a.navbar-brand.col-md-1.col-md-offset-1(href="/") WOA-Wiki
+                .nav.navbar-nav.col-md-9
+                    .row
+                        .nav-item.dropdown.col-md-1
+                            button.btn.btn-link.dropdown-toggle.nav-link(type="button" id="show_categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                                span.lead &#9776;
+                            .dropdown-menu(aria-labelledby="show_categories")
+                                .dropdown-item
+                                    a(href="#")
+                                        i.fa.fa-headphones
+                                        | Hello WOrld
+
+                        .nav-item.col-md-6
+                                form.navbar-form(method="get" action="/search")
+                                    .input-group
+                                        input.form-control(type="search" name="search")
+                                        span.input-group-btn
+                                            button.btn.btn-secondary(type="submit")
+                                                i.fa.fa-search
+                        .nav-item.dropdown.col-md-2
+                            button.btn.btn-link.dropdown-toggle.nav-link(type="button" id="show_auth" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                                img.img-rounded(src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-2-24.png")
+                                span.m-l Sign In
+
+                            .dropdown-menu(aria-labelledby="show_auth")
+                                .dropdown-header
+                                    h4
+                                        i.fa.fa-sign-in
+                                        | &nbsp;Sign in to continue
+                                form.navbar-form(method="post" action="/auth/check")
+                                    fieldset.form-group.dropdown-header
+                                        input.form-control(type="text" name="username" placeholder="username")
+                                    fieldset.form-group.dropdown-header
+                                        input.form-control(type="password" name="password" placeholder="password")
+
+                                    .dropdown-divider
+
+                                    fieldset.form-group.dropdown-header
+                                        a(href="#") Forgot your Password?
+                                    fieldset.form-group.dropdown-header
+                                        label.c-input.c-checkbox
+                                            input.form-control(type="checkbox" name="remember")
+                                            span.c-indicator
+                                            | Stay logged in?
+                                    fieldset.form-group.dropdown-header
+                                        input.btn.btn-success-outline.btn-block.form-control(type="submit" value="Sign In")

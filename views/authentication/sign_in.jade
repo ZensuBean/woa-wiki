@@ -1,0 +1,36 @@
+extends /layouts/layout
+
+block content
+    .container
+        .col-md-6.col-md-offset-3
+            .alert.alert-danger.alert-dismissible.fade.in(role="alert")
+                button.close(type="button" data-dismiss="alert" aria-label="Close")
+                    span(aria-hidden="true")!="&times;"
+                    span.sr-only Close
+
+                b Holy guacamole!
+                | You should check in on some of those fields below.
+
+
+            form(method="post" action="/auth/check")
+                .form-group
+                    h4
+                        i.fa.fa-sign-in
+                        | &nbsp;Sign in to continue
+
+                    fieldset.form-group
+                        input.form-control(type="text" name="username" placeholder="username")
+                    fieldset.form-group
+                        input.form-control(type="password" name="password" placeholder="password")
+
+                    hr
+
+                    fieldset.form-group
+                        a(href="#") Forgot your Password?
+                    fieldset.form-group
+                        label.c-input.c-checkbox
+                            input.form-control(type="checkbox" name="remember")
+                            span.c-indicator
+                            | Stay logged in?
+                    fieldset.form-group
+                        input.btn.btn-success-outline.btn-block.form-control(type="submit" value="Sign In")

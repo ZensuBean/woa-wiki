@@ -1,3 +1,6 @@
+public/stylesheets/*.css*
+!public/stylesheets/bootstrap.min.css
+
 ### OSX
 .DS_Store
 .AppleDouble
@@ -23,8 +26,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-### JetBrains
 
+### JetBrains
 *.iml
 .idea/
 
